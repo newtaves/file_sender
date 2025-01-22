@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files to Your Computer</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='favicon.jpg')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Files to Your Computer</h1>
+        <form method="post" enctype="multipart/form-data" action="/">
+            <div class="file-input-wrapper">
+                <input type="file" name="files" id="file-input" multiple>
+                <label for="file-input" class="file-input-label">
+                    <span class="file-input-text">Choose Files</span>
+                    <span class="file-input-icon">📁</span>
+                </label>
+            </div>
+            <div id="file-list" class="file-list"></div>
+            <input type="submit" value="Upload" class="submit-btn">
+        </form>
+        <div id="file-list">
+        {% if message['status']=='success' %}
+        <p style="color: green;">{{message['message']}}</p>
+        {%else%}
+        <p style="color: red;">{{message['message']}}</p>
+        {%endif%}
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
+
