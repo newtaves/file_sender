@@ -47,7 +47,7 @@ You can configure the allowed file extensions in the `app.config['ALLOWED_EXTENS
     python main.py
     ```
 
-3. Open a web browser and navigate to `http://0.0.0.0:5000/`. You'll see the file upload form.
+3. Open a web browser and navigate to `http://your_external_ip_address:5000/`. You'll see the file upload form.
 
 4. Select files to upload, and click the 'Upload' button. Uploaded files will be saved in the `uploads` folder.
 
