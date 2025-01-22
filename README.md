@@ -59,3 +59,7 @@ You can configure the allowed file extensions in the `app.config['ALLOWED_EXTENS
 ├── templates/
 │   └── index.html
 └── main.py
+```
+## Screenshots
+
+![Screenshot of the App](screenshot/screenshot1.png)
